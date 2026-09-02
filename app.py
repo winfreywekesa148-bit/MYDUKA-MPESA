@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return jsonify({"message": "M-Pesa server is running"})
 
 @app.route("/api/stk", methods=["POST"])
 def stk():
